@@ -1,0 +1,86 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.dark .glass-effect {
+    background: rgba(10, 37, 64, 0.8);
+}
+
+.sidebar-item:hover {
+    background: linear-gradient(90deg, rgba(99, 91, 255, 0.1) 0%, transparent 100%);
+    border-left: 3px solid #635BFF;
+}
+
+.sidebar-item {
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.metric-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 3px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #334155;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.tab-active {
+    border-bottom: 2px solid #635BFF;
+    color: #635BFF;
+}
+
+.dark .tab-active {
+    color: #818CF8;
+    border-color: #818CF8;
+}
